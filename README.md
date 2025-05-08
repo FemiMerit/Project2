@@ -1,131 +1,265 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# *DuckHunt*
 
-Welcome USER_NAME,
+Duck Hunt is a 1984 light gun shooter video game developed and published by Nintendo for the Nintendo Entertainment System (NES) video game console
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+A simplified  version of the game bas been created using HTML, CSS and Javascript. The main capability is a simple point and click, recording highscore with a specified time limit.
 
-You can safely delete this README.md file or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **June 18, 2024**
+The site can be accessed by this [link]()
 
-## Gitpod Reminders
+![responsive Mockup]()
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+---
+## User Stories
 
-`python3 -m http.server`
+Title: User run the game and is greated with the title screen Duck Hunt!
+The user is given the option to start game or read the instructions
 
-A blue button should appear to click: _Make Public_,
+Acceptance Criteria:
+Homepage
 
-Another blue button should appear to click: _Open Browser_.
+Users should see a bright coloured home screen of the Duck hunt game
 
-To run a backend Python file, type `python3 app.py` if your Python file is named `app.py`, of course.
+User can click on start game and will instantly be put into the playing it 
+User can also click on instruction to get a how to play guide
 
-A blue button should appear to click: _Make Public_,
+Interaction & Feedback
 
-Another blue button should appear to click: _Open Browser_.
+When users is put into playing the game, they will be given a timer and will have to use the mouse to aim at the gooses and click on the mouse to hit them.
+The more gooses the user hits the more points they get.
+Once the timer runs out the user score will be displyed and and a new target high score will be diplyed for the user to aim towards
 
-By Default, Gitpod gives you superuser security privileges. Therefore, you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+The game should be mobile-friendly and adjust well to different screen sizes.
+Text should be readable, with contrast for accessibility.
 
-To log into the Heroku toolbelt CLI:
+A contact form allowing users to reach out to me directly.
+Links to my LinkedIn, GitHub, or other relevant platforms.
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+### First Time Visitor Goals:
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you, so do not share it. If you accidentally make it public, you can create a new one with _Regenerate API Key_.
+* As a First Time Visitor, I want to easily understand the main purpose of the site, so I can learn more about Femi Merit background.
+* As a First Time Visitor, I want to be able to easily navigate through the website, so I can find the content.
+* As a First Time Visitor, I was to see updates to Femi's emplyment histrory
+* As a First Time Visitor, I want to see information about Femi's job roles, so i can undertand what he specialise in
+* As a First Time Visitor, I want to have a way to contact Femi Merit, so I can know his availability
+* As a First Time Visitor, I want to find link directing me to the company site Femi Merit has worked for
+* As a first time Visitor, I want to be able to get confirmation that my message sent to Femi as been achknowledge
 
-### Connecting your Mongo database
 
-- **Connect to Mongo CLI on a IDE**
-- navigate to your MongoDB Clusters Sandbox
-- click **"Connect"** button
-- select **"Connect with the MongoDB shell"**
-- select **"I have the mongo shell installed"**
-- choose **mongosh (2.0 or later)** for : **"Select your mongo shell version"**
-- choose option: **"Run your connection string in your command line"**
-- in the terminal, paste the copied code `mongo "mongodb+srv://<CLUSTER-NAME>.mongodb.net/<DBname>" --apiVersion 1 --username <USERNAME>`
-  - replace all `<angle-bracket>` keys with your own data
-- enter password _(will not echo **\*\*\*\*** on screen)_
+### Frequent Visitor Goals:
+* As a Frequent User, I want to check whether there are any changes with Femi's job situation, so I can make a choice to contact him or not
 
-------
+## Features
 
-## Release History
++ ### Navbar
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
++ ##### Navigation
+    - Positioned at the top left of the page.
+    - Contains the Home, Education, Employment, and Contact, links
+        * Home - leads to the home page where users can get a brief explanation of Femi's skills and expirirnece
+        * Education - leads to the education section where users can see Femi's highest quqlification and breakdown of his courses
+        * Employment - leads to the employment section where users can see Femi's employment history
+        * Conatct - leads to the conatct section, where users can see Femi's conatct detail and reach out to him
+    - The links have a hover effect of changing from beige to blue.
+    - The navigation is clear and easy to understand for the user.
+    ![NavBar desktop](documentation/nav-bar.png)
 
-**June 18, 2024,** Add Mongo back into template
-
-**June 14, 2024,** Temporarily remove Mongo until the key issue is resolved
-
-**May 28 2024:** Fix Mongo and Links installs
-
-**April 26 2024:** Update node version to 16
-
-**September 20 2023:** Update Python version to 3.9.17.
-
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
-
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
-
-**July 2 2021:** Remove extensions that are not available in Open VSX.
-
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
-
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
-
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
-
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
-
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
-
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+    - The navigation bar is responsive:
+        * On tablets and Mobile phones: navigation bar aligns vertically to the right side of the page
+        ![NavBar Tablets and Mibile phone](documentation/tablet-nav.png)
 
 ---
 
-Happy coding!
++ ### Home Page
+
+    - Represent: 
+
+        * Summary about Femi Merit's skills and professtion history
+        * Displays a interactive profile picture of Femi Merit
+
+    ![Home Page](documentation/home-page.png)
+
+---
+
++ #### Profile picture Section
+
+    - Profile picture section have a fixed background image with Femi Merit's picture places in the center.
+
+    - Profile picture section have block section below the picture
+
+        * Femi Merit name writen in bold capita letters.
+        * Femi Merit's current job title written below his name
+    
+    ![Profile-pic Section](documentation/profile-pic-section.png)
+
+--- 
+
++ #### Introduction Section
+
+    - Introduction Section has a image matching the website theme
+
+    - Tells website visitors a brief overview of Femi's background
+    
+    ![Introduction Section](documentation/intro-section.png)
+
+
+    ---
++ #### Education Section
+
+    - Has a line across the page to seperate the intrduction and enducation section
+    - Education Section has a hyperlink image of Femi Merit's university 
+    - Users can click the image to visit the university's website
+    - Below the image is a break down of Femi's course
+​
+    ![Education Section](documentation/education-section.png)
+
+
+---
++ #### Empoyment Section
+
+    - Has a line across the page to seperate the education and employment section
+    - Each company Femi has worked for has a hyperlinked image posistion above the job entry
+    - The users can click on each image to take them directly to the comapny's website
+    - Each job entry is styled in bullet points making it easy for user's to understand
+    - ​
+    ![Employment Section](documentation/employment-section.png)
+
+
+---
++ #### Footer
+
+    - Footer contains Femi Merit's conatct details (Email and Phone number)
+    - it also contains the form for the user to use to send a message directly to Femi Merit
+​
+    ![Footer](documentation/contact-section.png)
+​
+---
++ ### Form Section
+
+    - Displays a form for the user to fill
+
+        - Name: the user will put their full name here
+        - Email: the user will put their email address here
+        - Message: the user will put the message they want to send to Femi Merit
+        - Submit: this is the button the user will click to submit their request
+    
+​
+    ![Tour page](documentation/form-section.png)
+
+---
++ ### Response page
+
+    - Response page appears after submitting the contact form.
+    - It contains the thank you message and the promise to get in touch with the user
+    - The user can return to the mail pain by clicking the Home link positioned at the top left of the page
+
+    ![Response page](documentation/responce-section.png)
+
+---
+## Technologies Used
+
+- [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML) was used as the foundation of the site.
+- [CSS](https://developer.mozilla.org/en-US/docs/Web/css) - was used to add the styles and layout of the site.
+- [CSS Flexbox](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox) - was used to arrange items simmetrically on the pages.
+- [CSS bootstrap](https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css) was used to declaring global CSS style and apply them throughout the project. 
+- [Balsamiq](https://balsamiq.com/) was used to make wireframes for the website.
+- [VSCode](https://code.visualstudio.com/) was used as the main tool to write and edit code.
+- [Git](https://git-scm.com/) was used for the version control of the website.
+- [GitHub](https://github.com/) was used to host the code of the website.
+
+
+---
+## Design
+
+### Color Scheme
+
+- Black was used as the main colour of the website due to creating a slick and sophisticated look. As this colour is associated with proffesionalism, website visitors could build an idea of Femi Merit's proffesionalism
+
+- White was used as the text colour since this colour will contrast to the black background and pop to the viewers
+  
+### Typography
+
+![Main Font](documentation/font-style.png)
+
+- Lato Google Font was used as the main font of the website in order to increase readability of the content on the pages.
+
+
+### Wireframes
+
+#### Mobile devices
+
+- [Webepage. Mobile Screen](documentation/mobile.png)
+
+
+
+#### Tablets
+
+- [Webpage. Tablet Screen](documentation/tablet.png)
+
+#### Desktop
+
+- [Webpage. Desktop Screen](documentation/desktop.png)
+
+---
+
+## Testing
+
+Please refer to the [TESTING.md](TESTING.md) file for all test-related documentation.
+
+---
+
+
+## Deployment
+
+### Deployment to GitHub Pages
+
+- The site was deployed to GitHub pages. The steps to deploy are as follows: 
+  - In the [GitHub repository](https://github.com/FemiMerit/Project1.git), navigate to the Settings tab 
+  - From the source section drop-down menu, select the **Main** Branch, then click "Save".
+  - The page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
+
+The live link can be found [here](https://femimerit.github.io/Project1/)
+
+### Local Deployment
+
+In order to make a local copy of this project, you can clone it.
+In your IDE Terminal, type the following command to clone my repository:
+
+- `git clone https://github.com/FemiMerit/Project1.git`
+
+- Alternatively, if you use Gitpod, you can [click here](https://gitpod.io/#https://github.com/FemiMerit/Project1.git), which will start the Gitpod workspace for you.
+
+---
+
+## Future improvements
+- add custom 404 page;
+- add accessability report with [WAVE Web Accessibility Evaluation Tool](https://wave.webaim.org/);
+- improve the quality of the commit messages (I am aware that some of them are not very clear and not meeting the standards and 
+   will improve them in the future);
+- add fully functional contact form.
+
+---
+
++ #### Media
+
+    - All the images for the website were taken from [bing](https://bing.com/).
+    + [background image](https://d1csarkz8obe9u.cloudfront.net/posterpreviews/virtual-zoom-conference-backgrounds-design-template-1e0be94408ad2397b7ff07650245c5c0_screen.jpg?ts=1698660790);
+    + All images used:
+        - [1st image](https://miro.medium.com/v2/resize:fit:1200/1*35CvsViwO5MmPmDcskDYZA.jpeg)
+        - [2nd image](https://th.bing.com/th/id/OIP.0lcqam1DJyrqoLbnyCE-EwAAAA?pid=ImgDet&w=202&h=182&c=7&dpr=1.3);
+        - [3rd image](https://th.bing.com/th/id/OIP.UJcSdVYvaoqBCBLFysTDhAHaGm?pid=ImgDet&w=203&h=180&c=7&dpr=1.3);
+        - [4th image](https://th.bing.com/th/id/OIP.cx2lMwlV2K53nAN110ikwAHaHa?pid=ImgDet&w=202&h=202&c=7&dpr=1.3);
+        - [5th image](https://media.glassdoor.com/lst2x/86/71/e6/1d/nfu-mutual-north-east-regional-office.jpg).
+
++ #### Tools
+
+    - [FreeConverter](https://www.freeconvert.com/convert/mp4-to-gif) was used to convert mp4 vidoes to GIF images.
+
+---
+
+## Acknowledgments
+
+- [Juliia Konovalova](https://github.com/IuliiaKonovalova) was a great mentor as she pointed me to the right direction in       
+  completing the project
+- [Code Institute](https://codeinstitute.net/) tutors and Slack community members for their support and help.
+
+---

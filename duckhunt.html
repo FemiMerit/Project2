@@ -19,3 +19,42 @@
       <!-- Link to custom JavaScript file containing game logic -->
     <script src="js/app.js" charset="utf-8"></script>
   </head>
+
+  <body>
+    <!-- Game title (clicking reloads the game) -->
+    <div class="title"><a href="index.html">Duck Hunt!</a></div>
+
+    <!-- Area to display status messages (e.g., "You win!", "Game over") -->
+    <div class="status"></div>
+
+    <!-- Area to show game timer countdown -->
+    <div class="timer"></div>
+
+    <!-- Area to display player's score -->
+    <div class="score"> Score: </div>
+
+     <!-- Preloaded audio clips used during gameplay -->
+    <audio id="intro" src="sound/duckhuntintro.mp3"></audio>
+    <audio id="shot" src="sound/shot.mp3"></audio>
+    <audio id="quack" src="sound/quack.mp3"></audio>
+    <audio id="gameover" src="sound/gameover.mp3"></audio>
+    <audio id="laugh" src="sound/laugh.mp3"></audio>
+    <audio id="youfailed" src="sound/youfailed.mp3"></audio>
+
+    <!-- Dog character (may appear in animations or at game start) -->
+    <div class="dog"></div>
+
+    <!-- Ducks flying from left to right, each positioned at different starting points -->
+    <div class="duck left"  style="left: 100px"></div>
+    <div class="duck left"  style="left: 200px"></div>
+    <div class="duck left"  style="left: 300px"></div>
+    <div class="duck left"  style="left: 400px"></div>
+
+    <!-- Ducks flying from right to left -->
+    <div class="duck right" style="left: 500px"></div>
+    <div class="duck right" style="left: 600px"></div>
+    <div class="duck right" style="left: 700px"></div>
+    <div class="duck right" style="left: 800px"></div>
+
+  </body>
+</html>

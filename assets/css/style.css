@@ -1,0 +1,177 @@
+/* Set full height for page and prevent scrolling */
+body, html {
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Main body styling */
+body {
+  padding-right: 20px;
+  /* Center background image */
+  background-position: center; 
+  /* Game stage background */
+  background-image: url('images/stage.png'); 
+  /* Make background image cover entire area */
+  background-size: cover; 
+  /* Custom crosshair cursor */
+  cursor: url('images/crosshair.png') 32 32, crosshair; 
+  /* Text color */
+  color: white; 
+}
+
+/* Inherit styles for links to blend into game theme */
+a {
+  text-decoration: inherit;
+  color: inherit;
+}
+
+/* Add a grass image layer at the bottom of the screen */
+body:after {
+  display: inline-block;
+  padding-bottom: 10px;
+  content: '';
+  /* Grass visual at bottom */
+  background-image: url('images/grass.png'); 
+  background-size: cover;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 175px;
+}
+
+/* Title text styling (top-left) */
+.title {
+  position: absolute;
+  top: 10px;
+  left: 30px;
+  font-size: 2em;
+  font-family: Tahoma, Geneva, sans-serif;
+}
+
+/* Game status text (e.g., "Start!" or "Get ready!") */
+.status {
+  position: absolute;
+  top: 10px;
+  right: 700px;
+  font-size: 2em;
+  font-family: Tahoma, Geneva, sans-serif;
+}
+
+/* Timer display styling */
+.timer {
+  position: absolute;
+  top: 10px;
+  right: 320px;
+  font-size: 2em;
+  font-family: Tahoma, Geneva, sans-serif;
+}
+
+/* Score display styling */
+.score {
+  position: absolute;
+  top: 10px;
+  right: 30px;
+  font-size: 2em;
+  font-family: Tahoma, Geneva, sans-serif;
+}
+
+/* Base duck styling (used for animation and sprite positioning) */
+.duck {
+  position: absolute;
+  width: 110px;
+  height: 115px;
+  background: no-repeat;
+  bottom: 0;
+  /* Smooth movement */
+  transition: left, top, right, bottom; 
+  transition-duration: 1s;
+  transition-timing-function: linear;
+}
+
+/* Dog laughing image styling and animation trigger */
+.doglaugh {
+  position: absolute;
+  background-image: url('images/doglaugh.png');
+  width: 130px;
+  height: 165px;
+  top: 300px;
+  left: 300px;
+  /* Dog rising and exiting animation */
+  animation: dogUp 3s linear; 
+  /* Keep final animation state */
+  animation-fill-mode: forwards; 
+}
+
+/* Duck flying right (static frame) */
+.duck.right {
+  background-image: url("images/duckhunt.png");
+  background-position: -200px -160px;
+}
+
+/* Duck flying right with flapping wings */
+.duck.right.flap {
+  background-position: -300px -160px;
+}
+
+/* Duck flying left (static frame) */
+.duck.left {
+  background-image: url("images/duckhunt.png");
+  background-position: -100px -160px;
+}
+
+/* Duck flying left with flapping wings */
+.duck.left.flap {
+  background-position: -430px -160px;
+}
+
+/* Duck has been shot — show falling/shot sprite */
+.duck.shot {
+  z-index: -1; /* Send duck behind other elements */
+  background-image: url('images/shot.png');
+}
+
+/* Duck flight path animation (moves diagonally across screen) */
+@keyframes duck {
+  0% {
+    left: -100px;
+    top: 0px;
+  }
+  25% {
+    left: 280px;
+    top: 100px;
+  }
+  50% {
+    left: 480px;
+    top: 200px;
+  }
+  75% {
+    left: 980px;
+    top: 300px;
+  }
+  100% {
+    left: 1280px;
+    top: 400px;
+  }
+}
+
+/* Dog rise-and-exit animation (laughing after you miss) */
+@keyframes dogUp {
+  0% {
+    /* Start hidden below screen */
+    transform: translateY(300px); 
+  }
+  40% {
+    /* Dog rises */
+    transform: translateY(130px); 
+  }
+  70% {
+    /* Pause in middle */
+    transform: translateY(130px); 
+  }
+  100% {
+    /* Drop down and disappear */
+    transform: translateY(400px); 
+    overflow: hidden;
+    visibility: hidden;
+  }
+}

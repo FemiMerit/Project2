@@ -1,0 +1,42 @@
+/* Make the HTML and body elements take up the full height of the viewport */
+body, html {
+  height: 100%;
+  /* Prevent scrolling (important for fullscreen layouts like games) */
+  overflow: hidden; 
+}
+
+/* Style for the body element */
+body {
+  /* Center the background image */
+  background-position: center; 
+  /* Set background image (e.g., game stage) */
+  background-image: url('images/stage.png'); 
+  /* Scale image to cover entire screen */
+  background-size: cover; 
+  /* Set text color to white for visibility on dark backgrounds */
+  color: white; 
+}
+
+/* Style for all anchor (<a>) tags */
+a {
+  /* Inherit text decoration (e.g., no underline) from parent */
+  text-decoration: inherit; 
+  /* Inherit text color (keeps links styled like regular text) */
+  color: inherit; 
+}
+
+/* Style for elements with the class "title" */
+.title {
+  /* Allows precise positioning using top, left, etc. */
+  position: absolute; 
+  /* Make the title text larger (2x the normal size) */
+  font-size: 2em; 
+  /* Use a clean, readable sans-serif font */
+  font-family: Tahoma, Geneva, sans-serif; 
+}
+
+/* Remove bullet points from all unordered lists */
+ul {
+/* Makes lists appear without default bullets */
+  list-style-type: none; 
+}

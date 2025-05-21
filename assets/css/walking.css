@@ -1,0 +1,28 @@
+/* 
+  Styles and animations for the dog element.
+  The dog uses a sprite sheet for walking and moves from left to right across the screen.
+*/
+#dog {
+  /* Allows precise placement */
+  position: absolute;
+  /* Sprite sheet for walking animation */ 
+  background: url('images/dogwalk.png'); 
+  /* Position the dog near the bottom of the screen */
+  top: 520px; 
+  /* Width of a single frame in the sprite sheet */
+  width: 182px; 
+  /* Height of a single frame */
+  height: 171px; 
+  /* Apply two animations:
+     1. 'walk' animates the background to simulate walking frames.
+     2. 'dogMove' animates the dog’s movement across the screen.
+  */
+  animation: 
+    walk 2s steps(5) 1.9, 
+    dogMove 3.8s linear;
+  /* Retain final animation state after finishing */
+  animation-fill-mode: forwards; 
+}
+
+/* 
+  'walk' keyframes control the background position to cycle through sprite frames.

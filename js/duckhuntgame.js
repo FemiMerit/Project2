@@ -3,7 +3,7 @@ $(document).ready(function(){
 
   console.log('Welcome to Duck Hunt!');
 
-  //  Sound effect elements
+  //  Sounds Varable
   var intro = $('#intro');
   var shot = $('#shot');
   var quack = $('#quack');
@@ -11,19 +11,17 @@ $(document).ready(function(){
   var laugh = $('#laugh');
   var youfailed = $('#youfailed');
 
-  //  Timing settings
   // Time for lost duck to fade out
   var lostDuckFadeOutTime = 180; 
-  // Game loop interval in ms (faster = harder)
+  // Game loop interval in ms
   var gameSpeed = 200;           
 
-  //  Score and fade timing
   // Player score
   var numKilled = 0;  
   // Time for duck to fade out after being shot           
   var dieFadeOutTime = 1000;     
 
-  // Missed shot counter (used for dog laugh)
+  // Missed shot counter used for dog laugh  
   var counter = 0;
 
   // Handle player clicking anywhere on the document
@@ -49,7 +47,8 @@ $(document).ready(function(){
       // Cancel any pending animation
       clearTimeout(classAdd);           
     }
-  });
+  }
+)
 
   // Update score display
   function updateScore() {
@@ -107,7 +106,7 @@ $(document).ready(function(){
     }
   }
 
-  // ⏱ Main game loop — called every `gameSpeed` ms
+  // Main game loop — called every `gameSpeed` ms
   function step() {
     $('.duck').each(function (i, duck) {
       duck = $(duck);
@@ -187,14 +186,16 @@ $(document).ready(function(){
     shot[0].play(); 
     // Slight delay (may be typo: should be `shot[0].currentTime`)        
     shot.get[0].currentTime = 0.2; 
-  });
+  }
+);
 
-  // Timer countdown logic (starts at 75 seconds)
+  // Timer countdown start from 75 seconds
   function timer(){
     var sec = 75;
 
     timerCountdown = setInterval(function(){
-      $('.timer').html(sec + "s"); // Update timer on screen
+      // Update timer on screen
+      $('.timer').html(sec + "s"); 
       sec--;
 
       // Play intro and quack once at start
@@ -234,5 +235,5 @@ $(document).ready(function(){
 
   // Start the game
   timer(); // Start the countdown timer
-  var gameRunning = setInterval(step, gameSpeed); // Start the game loop
-});
+  var gameRunning = setInterval(step, gameSpeed);
+})

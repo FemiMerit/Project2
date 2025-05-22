@@ -100,18 +100,18 @@ $(document).ready(function(){
     // If duck escapes at top of screen
     if (duck.offset().top < 0) {
       duck.fadeOut(lostDuckFadeOutTime, function() {
-        duck.removeClass('left right'); // Reset duck state
-        recycle(duck);                  // Recycle duck to bottom
+        duck.removeClass('left right'); 
+        recycle(duck);                 
       });
     }
   }
 
-  // Main game loop — called every `gameSpeed` ms
+  // Main game loop
   function step() {
     $('.duck').each(function (i, duck) {
       duck = $(duck);
       if (isAlive(duck)) {
-        updateDuck(duck); // Update each alive duck
+        updateDuck(duck);
       }
     });
 
@@ -139,7 +139,7 @@ $(document).ready(function(){
       recycle(duck);
     });
 
-    // Increase difficulty based on score (reduce transition duration)
+    // Increase difficulty based on score
     if (numKilled > 0 && numKilled < 1000) {
       $('.duck').css("transition-duration", "0.65s");
       $('.status').html("Wave 1");

@@ -6,7 +6,7 @@
   /* Allows precise placement */
   position: absolute;
   /* Sprite sheet for walking animation */ 
-  background: url('images/dogwalk.png'); 
+  background: url('../images/dogwalk.png'); 
   /* Position the dog near the bottom of the screen */
   top: 520px; 
   /* Width of a single frame in the sprite sheet */

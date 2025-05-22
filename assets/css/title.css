@@ -10,7 +10,7 @@ body {
   /* Center the background image */
   background-position: center; 
   /* Set background image (e.g., game stage) */
-  background-image: url('images/stage.png'); 
+  background-image: url('../images/stage.png'); 
   /* Scale image to cover entire screen */
   background-size: cover; 
   /* Set text color to white for visibility on dark backgrounds */

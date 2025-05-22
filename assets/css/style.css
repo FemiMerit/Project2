@@ -10,11 +10,11 @@ body {
   /* Center background image */
   background-position: center; 
   /* Game stage background */
-  background-image: url('images/stage.png'); 
+  background-image: url('../images/stage.png'); 
   /* Make background image cover entire area */
   background-size: cover; 
   /* Custom crosshair cursor */
-  cursor: url('images/crosshair.png') 32 32, crosshair; 
+  cursor: url('../images/crosshair.png') 32 32, crosshair; 
   /* Text color */
   color: white; 
 }
@@ -31,7 +31,7 @@ body:after {
   padding-bottom: 10px;
   content: '';
   /* Grass visual at bottom */
-  background-image: url('images/grass.png'); 
+  background-image: url('../images/grass.png'); 
   background-size: cover;
   position: absolute;
   bottom: 0;
@@ -91,7 +91,7 @@ body:after {
 /* Dog laughing image styling and animation trigger */
 .doglaugh {
   position: absolute;
-  background-image: url('images/doglaugh.png');
+  background-image: url('../images/doglaugh.png');
   width: 130px;
   height: 165px;
   top: 300px;
@@ -104,7 +104,7 @@ body:after {
 
 /* Duck flying right (static frame) */
 .duck.right {
-  background-image: url("images/duckhunt.png");
+  background-image: url("../images/duckhunt.png");
   background-position: -200px -160px;
 }
 
@@ -115,7 +115,7 @@ body:after {
 
 /* Duck flying left (static frame) */
 .duck.left {
-  background-image: url("images/duckhunt.png");
+  background-image: url("../images/duckhunt.png");
   background-position: -100px -160px;
 }
 
@@ -127,7 +127,7 @@ body:after {
 /* Duck has been shot — show falling/shot sprite */
 .duck.shot {
   z-index: -1; /* Send duck behind other elements */
-  background-image: url('images/shot.png');
+  background-image: url('../images/shot.png');
 }
 
 /* Duck flight path animation (moves diagonally across screen) */

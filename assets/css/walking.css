@@ -6,11 +6,11 @@
   /* Sprite sheet for walking animation */ 
   background: url('../images/dogwalk.png'); 
   /* Position the dog near the bottom of the screen */
-  top: 520px; 
+  top: 50%; 
   /* Width of a single frame in the sprite sheet */
-  width: 182px; 
+  width: 18.%; 
   /* Height of a single frame */
-  height: 171px; 
+  height: 17.1%; 
   /* Apply two animations to dog movment
      1. 'walk' animates the background
      2. 'dogMove' animates the dog’s movement across the screen.
@@ -27,7 +27,7 @@
 
   @keyframes walk {
   0% {
-    background-position: 910px;
+    background-position: 91%;
   }
   100% {
     background-position: 0px;

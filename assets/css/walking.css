@@ -1,45 +1,50 @@
-/* Styles and animations for the dog element */
+/* 
+  Styles and animations for the dog element.
+*/
 #dog {
   position: absolute;
-
-  /* Use responsive background image (sprite sheet) */
-  background: url('../images/dogwalk.png') no-repeat;
-  background-size: cover;
-
+  /* Sprite sheet for walking animation */ 
+  background: url('../images/dogwalk.png'); 
   /* Position the dog near the bottom of the screen */
-  bottom: 5vh;
-
-  /* Responsive width and height based on viewport width */
-  width: 12vw; /* formerly 182px */
-  height: auto;
-  aspect-ratio: 182 / 171;
-
-  /* Animations */
-  animation:
-    walk 2s steps(5) 1.9,
+  top: 520px; 
+  /* Width of a single frame in the sprite sheet */
+  width: 182px; 
+  /* Height of a single frame */
+  height: 171px; 
+  /* Apply two animations to dog movment
+     1. 'walk' animates the background
+     2. 'dogMove' animates the dog’s movement across the screen.
+  */
+  animation: 
+    walk 2s steps(5) 1.9, 
     dogMove 3.8s linear;
-  animation-fill-mode: forwards;
+  /* Retain final animation state after finishing */
+  animation-fill-mode: forwards; 
 }
 
-/* Walk animation: animate background sprite frames */
-@keyframes walk {
+/* 
+  'walk' keyframes control the background position to cycle through sprite frames. */
+
+  @keyframes walk {
   0% {
-    background-position: 100% 0;
+    background-position: 910px;
   }
   100% {
-    background-position: 0 0;
+    background-position: 0px;
   }
 }
 
-/* Dog movement across screen using viewport units */
 @keyframes dogMove {
   0% {
-    transform: translateX(-10vw);
+    transform: translateX(-100px);
   }
   10% {
-    transform: translateX(-10vw);
+    transform: translateX(-100px);
   }
   100% {
-    transform: translateX(30vw);
+    transform: translateX(300px);
+    overflow: hidden;
   }
+  
 }
+  

@@ -1,21 +1,22 @@
 /* Set full height for page and prevent scrolling */
-html, body {
-  height: 100vh;
-  margin: 0;
-  padding: 0;
+body, html {
+  height: 100%;
   overflow: hidden;
 }
 
 /* Main body styling */
 body {
-  padding-right: 2vw; /* replaced 20px */
-  background-image: url('../images/stage.png');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  cursor: url('../images/crosshair.png') 2vw 2vw, crosshair;
-  color: white;
-  font-family: Tahoma, Geneva, sans-serif;
+  padding-right: 20px;
+  /* Center background image */
+  background-position: center; 
+  /* Game stage background */
+  background-image: url('../images/stage.png'); 
+  /* Make background image cover entire area */
+  background-size: cover; 
+  /* Custom crosshair cursor */
+  cursor: url('../images/crosshair.png') 32 32, crosshair; 
+  /* Text color */
+  color: white; 
 }
 
 /* Inherit styles for links to blend into game theme */
@@ -25,58 +26,64 @@ a {
 }
 
 /* Add a grass image layer at the bottom of the screen */
-body::after {
-  content: '';
+body:after {
   display: inline-block;
-  padding-bottom: 1vh;
-  background-image: url('../images/grass.png');
+  padding-bottom: 10px;
+  content: '';
+  /* Grass visual at bottom */
+  background-image: url('../images/grass.png'); 
   background-size: cover;
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 15vh; /* Replaces fixed 175px */
+  height: 175px;
 }
 
 /* Title text styling (top-left) */
 .title {
   position: absolute;
-  top: 2vh;
-  left: 2vw;
-  font-size: 2.5vw;
+  top: 10px;
+  left: 30px;
+  font-size: 2em;
+  font-family: Tahoma, Geneva, sans-serif;
 }
 
-/* Game status text */
+/* Game status text (e.g., "Start!" or "Get ready!") */
 .status {
   position: absolute;
-  top: 2vh;
-  right: 45vw; /* Responsive position */
-  font-size: 2.5vw;
+  top: 10px;
+  right: 700px;
+  font-size: 2em;
+  font-family: Tahoma, Geneva, sans-serif;
 }
 
 /* Timer display styling */
 .timer {
   position: absolute;
-  top: 2vh;
-  right: 20vw;
-  font-size: 2.5vw;
+  top: 10px;
+  right: 320px;
+  font-size: 2em;
+  font-family: Tahoma, Geneva, sans-serif;
 }
 
 /* Score display styling */
 .score {
   position: absolute;
-  top: 2vh;
-  right: 2vw;
-  font-size: 2.5vw;
+  top: 10px;
+  right: 30px;
+  font-size: 2em;
+  font-family: Tahoma, Geneva, sans-serif;
 }
 
-/* Base duck styling */
+/* Base duck styling (used for animation and sprite positioning) */
 .duck {
   position: absolute;
-  width: 8vw;       /* Replaces 110px */
-  height: 8.3vw;     /* Replaces 115px, maintains aspect ratio */
+  width: 110px;
+  height: 115px;
   background: no-repeat;
   bottom: 0;
-  transition: left, top, right, bottom;
+  /* Smooth movement */
+  transition: left, top, right, bottom; 
   transition-duration: 1s;
   transition-timing-function: linear;
 }
@@ -85,79 +92,86 @@ body::after {
 .doglaugh {
   position: absolute;
   background-image: url('../images/doglaugh.png');
-  width: 9vw;       /* Replaces 130px */
-  height: 11.4vw;   /* Replaces 165px, maintains aspect ratio */
-  top: 25vh;
-  left: 20vw;
-  animation: dogUp 3s linear;
-  animation-fill-mode: forwards;
+  width: 130px;
+  height: 165px;
+  top: 300px;
+  left: 300px;
+  /* Dog rising and exiting animation */
+  animation: dogUp 3s linear; 
+  /* Keep final animation state */
+  animation-fill-mode: forwards; 
 }
 
 /* Duck flying right (static frame) */
 .duck.right {
   background-image: url("../images/duckhunt.png");
-  background-position: -13vw -11vw;
+  background-position: -200px -160px;
 }
 
 /* Duck flying right with flapping wings */
 .duck.right.flap {
-  background-position: -20vw -11vw;
+  background-position: -300px -160px;
 }
 
 /* Duck flying left (static frame) */
 .duck.left {
   background-image: url("../images/duckhunt.png");
-  background-position: -6vw -11vw;
+  background-position: -100px -160px;
 }
 
 /* Duck flying left with flapping wings */
 .duck.left.flap {
-  background-position: -30vw -11vw;
+  background-position: -430px -160px;
 }
 
-/* Duck has been shot */
+/* Duck has been shot — show falling/shot sprite */
 .duck.shot {
-  z-index: -1;
+  z-index: -1; /* Send duck behind other elements */
   background-image: url('../images/shot.png');
 }
 
-/* Duck flight path animation */
+/* Duck flight path animation (moves diagonally across screen) */
 @keyframes duck {
   0% {
-    left: -8vw;
-    top: 0vh;
+    left: -100px;
+    top: 0px;
   }
   25% {
-    left: 20vw;
-    top: 10vh;
+    left: 280px;
+    top: 100px;
   }
   50% {
-    left: 40vw;
-    top: 20vh;
+    left: 480px;
+    top: 200px;
   }
   75% {
-    left: 70vw;
-    top: 30vh;
+    left: 980px;
+    top: 300px;
   }
   100% {
-    left: 90vw;
-    top: 40vh;
+    left: 1280px;
+    top: 400px;
   }
 }
 
-/* Dog rise-and-exit animation */
+/* Dog rise-and-exit animation (laughing after you miss) */
 @keyframes dogUp {
   0% {
-    transform: translateY(25vh);
+    /* Start hidden below screen */
+    transform: translateY(300px); 
   }
   40% {
-    transform: translateY(10vh);
+    /* Dog rises */
+    transform: translateY(130px); 
   }
   70% {
-    transform: translateY(10vh);
+    /* Pause in middle */
+    transform: translateY(130px); 
   }
   100% {
-    transform: translateY(35vh);
+    /* Drop down and disappear */
+    transform: translateY(400px); 
+    overflow: hidden;
     visibility: hidden;
   }
 }

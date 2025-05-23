@@ -31,45 +31,41 @@ Once the timer runs out the user score will be displyed and and a new target hig
 The game should be mobile-friendly and adjust well to different screen sizes.
 Text should be readable, with contrast for accessibility.
 
-A contact form allowing users to reach out to me directly.
-Links to my LinkedIn, GitHub, or other relevant platforms.
+## Live Demo
 
-### First Time Visitor Goals:
-
-* As a First Time Visitor, I want to easily understand the main purpose of the site, so I can learn more about Femi Merit background.
-* As a First Time Visitor, I want to be able to easily navigate through the website, so I can find the content.
-* As a First Time Visitor, I was to see updates to Femi's emplyment histrory
-* As a First Time Visitor, I want to see information about Femi's job roles, so i can undertand what he specialise in
-* As a First Time Visitor, I want to have a way to contact Femi Merit, so I can know his availability
-* As a First Time Visitor, I want to find link directing me to the company site Femi Merit has worked for
-* As a first time Visitor, I want to be able to get confirmation that my message sent to Femi as been achknowledge
-
-
-### Frequent Visitor Goals:
-* As a Frequent User, I want to check whether there are any changes with Femi's job situation, so I can make a choice to contact him or not
-
-## Features
-
-+ ### Navbar
-
-+ ##### Navigation
-    - Positioned at the top left of the page.
-    - Contains the Home, Education, Employment, and Contact, links
-        * Home - leads to the home page where users can get a brief explanation of Femi's skills and expirirnece
-        * Education - leads to the education section where users can see Femi's highest quqlification and breakdown of his courses
-        * Employment - leads to the employment section where users can see Femi's employment history
-        * Conatct - leads to the conatct section, where users can see Femi's conatct detail and reach out to him
-    - The links have a hover effect of changing from beige to blue.
-    - The navigation is clear and easy to understand for the user.
-    ![NavBar desktop](documentation/nav-bar.png)
-
-    - The navigation bar is responsive:
-        * On tablets and Mobile phones: navigation bar aligns vertically to the right side of the page
-        ![NavBar Tablets and Mibile phone](documentation/tablet-nav.png)
+You can try the game here: [Play Duck Hunt](https://femimerit.github.io/Project2/)  
 
 ---
 
-+ ### Home Page
+### First Time Visitor Goals:
+
+- As a user, I want to be welcomed with a colorful title screen.
+- I can choose to **Start Game** or view **Instructions**.
+
+### Gameplay
+
+- As a player, I want to shoot ducks using my mouse within a time limit.
+- I receive immediate feedback with sound and animations.
+- I can try to beat my high score on each playthrough.
+
+
+### Instructions Page
+
+- As a new user, I can read clear instructions on how to play the game before starting.
+
+---
+
+## 🛠 Technologies Used
+
+- **HTML5** for structure
+- **CSS3** for styling and responsive layout
+- **JavaScript** for gameplay logic
+- **JQuery** (legacy support)
+- Custom assets (images and sound effects)
+
+---
+
++ ### Welcome Screen
 
     - Represent: 
 
@@ -80,16 +76,18 @@ Links to my LinkedIn, GitHub, or other relevant platforms.
 
 ---
 
-+ #### Profile picture Section
++ #### 📁 Project Structure
 
-    - Profile picture section have a fixed background image with Femi Merit's picture places in the center.
-
-    - Profile picture section have block section below the picture
-
-        * Femi Merit name writen in bold capita letters.
-        * Femi Merit's current job title written below his name
-    
-    ![Profile-pic Section](documentation/profile-pic-section.png)
+Project2-main/
+├── assets/
+│   ├── css/
+│   ├── images/
+│   └── sound/
+├── js/
+├── index.html
+├── duckhunt.html
+├── instructions.html
+└── README.md
 
 --- 
 

@@ -204,5 +204,5 @@ These are future task that could be completed to improve the functionality of th
 ##### Potential Features:
 Potential features could be adding more events for the bird flying animations and interations with the dog.
 
-Also including an interface that counts the ammunition and limits how many the user has.
+Also including an interface that counts the animation and limits how many the user has.
 ---

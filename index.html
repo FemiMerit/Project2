@@ -1,27 +1,42 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Duck Hunt</title>
-    <link rel="stylesheet" href="assets/css/title.css">
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    </head>
-    <body>
-    <div class="title">
-      <!--Main heading is a clickable link to the homepage.-->  
-      <h1><a href="index.html">Duck Hunt!</a></h1>
-      <!--A menu with one option: Start Game, linking to duckhunt.htm-->
-      <ul>
-        <li><a href="duckhunt.html">Start Game</a></li>
-        <!--An ordered list of instructions for the game.-->
-      </ul>
-      <!--Each item uses class inst, for consistent styling (font, size, color).-->
-      <ol>
-        <li class="inst">Use the cursor to target the ducks</li>
-        <li class="inst">Click on the ducks to hit them down</li>
-        <li class="inst">The more ducks you hit,the faster the game gets and the more points you get</li>
-      </ol>
-      <!--Encourages the player to beat a high score.-->
-      <h2>Try and get a high Score of 7000 if you can!</h2>
-  </body>
-</html>
+<html lang="en" dir="itr">
+
+        <head>
+
+        <!--Meta tag for search engine-->
+        <meta charset="utf-8">
+        <meta name ="description" content="DuckHunt game for casual gamers"/>
+        <meta name = "keyword" content = "DuckHunt, DuckHunt game,"/> 
+        <link rel="stylesheet" href="assets/css/title.css">
+        <link rel="stylesheet" href="assets/css/walking.css">
+
+        <!--Ttile-->
+        <title>Duck Hunt</title>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+        <script src="js/titlescreen.js" charset="utf-8"></script>
+      </head>
+
+      <body>
+        <header>
+         <!--Main container for the title screen--> 
+        <div class="title">
+         <!--Used for countdowns --> 
+          <div class="timer"></div>
+          <!--"Duck Hunt!" links back to the homepage-->
+          <h1><a href="index.html">Duck Hunt!</a></h1>
+          <!--Two links below allow the user to start the game or read instructions-->
+          <ul>
+            <li><a href="duckhunt.html">Start Game</a></li>
+            <li><a href="instructions.html">Instructions</a></li>
+          <!-- For a dog animation-->
+          </ul>
+          <div id="dog"></div>
+          <!--Background music for the title screen-->
+          <audio id="titlesound" src="assets/sound/titlescreen.mp3" loop="loop"></audio>
+          <!--A dog barking sound,-->
+          <audio id="bark" src="assets/sound/bark.mp3"></audio>
+        </header>
+        </div>
+      </body>
+    </html>

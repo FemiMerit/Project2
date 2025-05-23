@@ -55,7 +55,7 @@ You can try the game here: [Play Duck Hunt](https://femimerit.github.io/Project2
 
 ---
 
-## 🛠 Technologies Used
+## Technologies Used
 
 - **HTML5** for structure
 - **CSS3** for styling and responsive layout
@@ -91,173 +91,118 @@ Project2-main/
 
 --- 
 
-+ #### Introduction Section
++ ## Development
+### Issues:
 
-    - Introduction Section has a image matching the website theme
+* Animation
+* Image positioning
+* Audio
 
-    - Tells website visitors a brief overview of Femi's background
-    
-    ![Introduction Section](documentation/intro-section.png)
+##### Animation:
 
+A couple of issues where present when trying the form animate the intro scene of the duck.
 
-    ---
-+ #### Education Section
+With the sprite sheet for the dog not containing an consistent height and pixel pixel.
 
-    - Has a line across the page to seperate the intrduction and enducation section
-    - Education Section has a hyperlink image of Femi Merit's university 
-    - Users can click the image to visit the university's website
-    - Below the image is a break down of Femi's course
-​
-    ![Education Section](documentation/education-section.png)
+Overcame by running the aninmation with a iteration of 1.9 and while slightly cropping the image.
 
+```css
+#dog {
+  position: absolute;
+  background: url('images/dogwalk.png');
+  top: 520px;
+  width: 182px;
+  height: 171px;
+  animation: walk 2s steps(5) 1.9, dogMove 3.8s linear;
+  animation-fill-mode: forwards;
+}
 
----
-+ #### Empoyment Section
+@keyframes walk {
+  0% {
+    background-position: 910px;
+  }
+  100% {
+    background-position: 0px;
+  }
+}
 
-    - Has a line across the page to seperate the education and employment section
-    - Each company Femi has worked for has a hyperlinked image posistion above the job entry
-    - The users can click on each image to take them directly to the comapny's website
-    - Each job entry is styled in bullet points making it easy for user's to understand
-    - ​
-    ![Employment Section](documentation/employment-section.png)
+@keyframes dogMove {
+  0% {
+    transform: translateX(-100px);
+  }
+  10% {
+    transform: translateX(-100px);
+  }
+  100% {
+    transform: translateX(300px);
+    overflow: hidden;
+  } 
+}
 
+```
 
----
-+ #### Footer
+Including these lines of code allowed for a smooth animation for the walking across the screen
 
-    - Footer contains Femi Merit's conatct details (Email and Phone number)
-    - it also contains the form for the user to use to send a message directly to Femi Merit
-​
-    ![Footer](documentation/contact-section.png)
-​
----
-+ ### Form Section
+##### Image Positioning:
 
-    - Displays a form for the user to fill
+Initial ideas were to position the ducks behind the background.However this posed many problems with an expected solution of the css function
 
-        - Name: the user will put their full name here
-        - Email: the user will put their email address here
-        - Message: the user will put the message they want to send to Femi Merit
-        - Submit: this is the button the user will click to submit their request
-    
-​
-    ![Tour page](documentation/form-section.png)
+```
+z-index: -1;
 
----
-+ ### Response page
+```
+not solving the problem.
 
-    - Response page appears after submitting the contact form.
-    - It contains the thank you message and the promise to get in touch with the user
-    - The user can return to the mail pain by clicking the Home link positioned at the top left of the page
+Instead requiring and overlay of the grass.png on top of the backgroun image. This was succesfully achieved with the css:
 
-    ![Response page](documentation/responce-section.png)
+```css
+body:after {
+display:inline-block;
+padding-bottom: 10px;
+content: '';
+background-image: url('images/grass.png');
+background-size: cover;
+position: absolute;
+bottom: 0;
+width: 100%;
+height: 175px;
+```
 
----
-## Technologies Used
+##### Audio:
 
-- [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML) was used as the foundation of the site.
-- [CSS](https://developer.mozilla.org/en-US/docs/Web/css) - was used to add the styles and layout of the site.
-- [CSS Flexbox](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox) - was used to arrange items simmetrically on the pages.
-- [CSS bootstrap](https://cdn.jsdelivr.net/npm/bootstrap@4/dist/css/bootstrap.min.css) was used to declaring global CSS style and apply them throughout the project. 
-- [Balsamiq](https://balsamiq.com/) was used to make wireframes for the website.
-- [VSCode](https://code.visualstudio.com/) was used as the main tool to write and edit code.
-- [Git](https://git-scm.com/) was used for the version control of the website.
-- [GitHub](https://github.com/) was used to host the code of the website.
+With the limitations of Chrome implementing audio on loadup was particularly difficult. Chrome has an autoplay prevention feature.Therefore setting background music required using the
 
+```jQuery
+setTimeOut(function,time(ms));
+```
 
----
-## Design
+```js
+  var title = $('#titlesound');
+  function timer(){
+    var sec = 80;
+    var timerCountdown = setInterval(function(){
+      // console.log(sec);
+      sec--;
+      if (sec == 79) {
+        title[0].play();
+      }}, 100);
+    }
+  timer();
+```	
 
-### Color Scheme
+With this a timer is created that	 runs a function that plays the audio if the timer meets a condition e.g. after 1 second.
 
-- Black was used as the main colour of the website due to creating a slick and sophisticated look. As this colour is associated with proffesionalism, website visitors could build an idea of Femi Merit's proffesionalism
+##### Bugs:
+Some bugs are still present in the current build of the game.
 
-- White was used as the text colour since this colour will contrast to the black background and pop to the viewers
-  
-### Typography
+Examples of this would be the dog laughing event added with the shot is missed twice. If the player were to miss again i.e. click on the page where a duck is not present then the event will automatically end without fully loaded the animation.
 
-![Main Font](documentation/font-style.png)
+Another potential bug is the time delay in the audio when a shot is fired.There is currently a delay of 1s therefore two proceding shots wont sound one after the other instead the sound play again on the 4 shot.
 
-- Lato Google Font was used as the main font of the website in order to increase readability of the content on the pages.
+These are future task that could be completed to improve the functionality of the game.
 
+##### Potential Features:
+Potential features could be adding more events for the bird flying animations and interations with the dog.
 
-### Wireframes
-
-#### Mobile devices
-
-- [Webepage. Mobile Screen](documentation/mobile.png)
-
-
-
-#### Tablets
-
-- [Webpage. Tablet Screen](documentation/tablet.png)
-
-#### Desktop
-
-- [Webpage. Desktop Screen](documentation/desktop.png)
-
----
-
-## Testing
-
-Please refer to the [TESTING.md](TESTING.md) file for all test-related documentation.
-
----
-
-
-## Deployment
-
-### Deployment to GitHub Pages
-
-- The site was deployed to GitHub pages. The steps to deploy are as follows: 
-  - In the [GitHub repository](https://github.com/FemiMerit/Project1.git), navigate to the Settings tab 
-  - From the source section drop-down menu, select the **Main** Branch, then click "Save".
-  - The page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
-
-The live link can be found [here](https://femimerit.github.io/Project1/)
-
-### Local Deployment
-
-In order to make a local copy of this project, you can clone it.
-In your IDE Terminal, type the following command to clone my repository:
-
-- `git clone https://github.com/FemiMerit/Project1.git`
-
-- Alternatively, if you use Gitpod, you can [click here](https://gitpod.io/#https://github.com/FemiMerit/Project1.git), which will start the Gitpod workspace for you.
-
----
-
-## Future improvements
-- add custom 404 page;
-- add accessability report with [WAVE Web Accessibility Evaluation Tool](https://wave.webaim.org/);
-- improve the quality of the commit messages (I am aware that some of them are not very clear and not meeting the standards and 
-   will improve them in the future);
-- add fully functional contact form.
-
----
-
-+ #### Media
-
-    - All the images for the website were taken from [bing](https://bing.com/).
-    + [background image](https://d1csarkz8obe9u.cloudfront.net/posterpreviews/virtual-zoom-conference-backgrounds-design-template-1e0be94408ad2397b7ff07650245c5c0_screen.jpg?ts=1698660790);
-    + All images used:
-        - [1st image](https://miro.medium.com/v2/resize:fit:1200/1*35CvsViwO5MmPmDcskDYZA.jpeg)
-        - [2nd image](https://th.bing.com/th/id/OIP.0lcqam1DJyrqoLbnyCE-EwAAAA?pid=ImgDet&w=202&h=182&c=7&dpr=1.3);
-        - [3rd image](https://th.bing.com/th/id/OIP.UJcSdVYvaoqBCBLFysTDhAHaGm?pid=ImgDet&w=203&h=180&c=7&dpr=1.3);
-        - [4th image](https://th.bing.com/th/id/OIP.cx2lMwlV2K53nAN110ikwAHaHa?pid=ImgDet&w=202&h=202&c=7&dpr=1.3);
-        - [5th image](https://media.glassdoor.com/lst2x/86/71/e6/1d/nfu-mutual-north-east-regional-office.jpg).
-
-+ #### Tools
-
-    - [FreeConverter](https://www.freeconvert.com/convert/mp4-to-gif) was used to convert mp4 vidoes to GIF images.
-
----
-
-## Acknowledgments
-
-- [Juliia Konovalova](https://github.com/IuliiaKonovalova) was a great mentor as she pointed me to the right direction in       
-  completing the project
-- [Code Institute](https://codeinstitute.net/) tutors and Slack community members for their support and help.
-
+Also including an interface that counts the ammunition and limits how many the user has.
 ---

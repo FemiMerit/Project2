@@ -76,7 +76,7 @@ You can try the game here: [Play Duck Hunt](https://femimerit.github.io/Project2
 
         * Displays the instruction
 
-    ![Title Screen](documents/instruction.png)
+    ![Instruction Screen](documents/instruction.png)
 
 ---
 
@@ -86,7 +86,7 @@ You can try the game here: [Play Duck Hunt](https://femimerit.github.io/Project2
 
         * Displays the gameplay
 
-    ![Title Screen](documents/gameplay.gif)
+    ![Gameplay Screen](documents/gameplay.gif)
 
 ---
 
@@ -202,10 +202,35 @@ setTimeOut(function,time(ms));
       }}, 100);
     }
   timer();
-```	
+```
 
-With this a timer is created that	 runs a function that plays the audio if the timer meets a condition e.g. after 1 second.
+## Deployment
 
+### Deployment to GitHub Pages
+
+- The site was deployed to GitHub pages. The steps to deploy are as follows: 
+  - In the [GitHub repository](https://github.com/FemiMerit/Project2.git), navigate to the Settings tab 
+  - From the source section drop-down menu, select the **Main** Branch, then click "Save".
+  - The page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
+
+The live link can be found [here](https://femimerit.github.io/Project2/)
+
+### Local Deployment
+
+In order to make a local copy of this project, you can clone it.
+In your IDE Terminal, type the following command to clone my repository:
+
+- `git clone https://github.com/FemiMerit/Project2.git`
+
+- Alternatively, if you use Gitpod, you can [click here](https://gitpod.io/#https://github.com/FemiMerit/Project2.git), which will start the Gitpod workspace for you.
+
+---
+
++ #### Tools
+
+    - [FreeConverter](https://www.freeconvert.com/convert/mp4-to-gif) was used to convert mp4 vidoes to GIF images.
+
+---
 ##### Bugs:
 Some bugs are still present in the current build of the game.
 
@@ -213,10 +238,23 @@ Examples of this would be the dog laughing event added with the shot is missed t
 
 Another potential bug is the time delay in the audio when a shot is fired.There is currently a delay of 1s therefore two proceding shots wont sound one after the other instead the sound play again on the 4 shot.
 
+Not fully responsive accross different screensize. with more time this can be fixed and streamlined
+
 These are future task that could be completed to improve the functionality of the game.
 
 ##### Potential Features:
 Potential features could be adding more events for the bird flying animations and interations with the dog.
+Adding a online leaderboard
+Adding different difficulty levels
+Including an interface that counts the animation and limits how many the user has.
 
-Also including an interface that counts the animation and limits how many the user has.
+---
+
+---
+
+## Acknowledgments
+
+- [Juliia Konovalova](https://github.com/IuliiaKonovalova) was a great mentor as she pointed me to the right direction in       
+  completing the project
+- [Code Institute](https://codeinstitute.net/) tutors and Slack community members for their support and help.
 ---

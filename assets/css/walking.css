@@ -12,12 +12,12 @@
   /* Height of a single frame */
   height: 171px; 
   /* Apply two animations to dog movment
-     1. 'walk' animates the background
-     2. 'dogMove' animates the dog’s movement across the screen.
+  1. 'walk' animates the background
+  2. 'dogMove' animates the dog’s movement across the screen.
   */
   animation: 
-    walk 2s steps(5) 1.9, 
-    dogMove 3.8s linear;
+  walk 2s steps(5) 1.9, 
+  dogMove 3.8s linear;
   /* Retain final animation state after finishing */
   animation-fill-mode: forwards; 
 }

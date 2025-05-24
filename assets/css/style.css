@@ -132,46 +132,46 @@ body:after {
 
 /* Duck flight path animation (moves diagonally across screen) */
 @keyframes duck {
-  0% {
-    left: -100px;
-    top: 0px;
+0% {
+  left: -100px;
+  top: 0px;
   }
   25% {
-    left: 280px;
-    top: 100px;
+  left: 280px;
+  top: 100px;
   }
   50% {
-    left: 480px;
-    top: 200px;
+  left: 480px;
+  top: 200px;
   }
   75% {
-    left: 980px;
-    top: 300px;
+  left: 980px;
+  top: 300px;
   }
   100% {
-    left: 1280px;
-    top: 400px;
-  }
+  left: 1280px;
+  top: 400px;
+}
 }
 
 /* Dog rise-and-exit animation (laughing after you miss) */
 @keyframes dogUp {
-  0% {
-    /* Start hidden below screen */
-    transform: translateY(300px); 
+0% {
+  /* Start hidden below screen */
+  transform: translateY(300px); 
   }
   40% {
-    /* Dog rises */
-    transform: translateY(130px); 
+  /* Dog rises */
+  transform: translateY(130px); 
   }
   70% {
-    /* Pause in middle */
-    transform: translateY(130px); 
+  /* Pause in middle */
+  transform: translateY(130px); 
   }
   100% {
-    /* Drop down and disappear */
-    transform: translateY(400px); 
-    overflow: hidden;
-    visibility: hidden;
+  /* Drop down and disappear */
+  transform: translateY(400px); 
+  overflow: hidden;
+  visibility: hidden;
   }
 }

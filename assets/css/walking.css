@@ -7,9 +7,9 @@
   /* Sprite sheet for walking animation */ 
   background: url('../images/dogwalk.png'); 
   /* Position the dog near the bottom of the screen */
-  top: 520px; 
+  top: 40%; 
   /* Width of a single frame in the sprite sheet */
-  width: 182px; 
+  width: 100%; 
   /* Height of a single frame */
   height: 171px; 
   /* Apply two animations to dog movment

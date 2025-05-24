@@ -4,10 +4,6 @@ Duck Hunt is a 1984 light gun shooter video game developed and published by Nint
 
 A simplified  version of the game bas been created using HTML, CSS and Javascript. The main capability is a simple point and click, recording highscore with a specified time limit.
 
-The site can be accessed by this [link]()
-
-![responsive Mockup]()
-
 ---
 ## User Stories
 
@@ -48,7 +44,6 @@ You can try the game here: [Play Duck Hunt](https://femimerit.github.io/Project2
 - I receive immediate feedback with sound and animations.
 - I can try to beat my high score on each playthrough.
 
-
 ### Instructions Page
 
 - As a new user, I can read clear instructions on how to play the game before starting.
@@ -65,14 +60,13 @@ You can try the game here: [Play Duck Hunt](https://femimerit.github.io/Project2
 
 ---
 
-+ ### Welcome Screen
++ ### Title Screen
 
     - Represent: 
 
-        * Summary about Femi Merit's skills and professtion history
-        * Displays a interactive profile picture of Femi Merit
+        * Displays a colourful page with a dog walking across it
 
-    ![Home Page](documentation/home-page.png)
+    ![Title Screen](documentation/)
 
 ---
 

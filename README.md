@@ -76,7 +76,7 @@ You can try the game here: [Play Duck Hunt](https://femimerit.github.io/Project2
 
         * Displays the instruction
 
-    ![Instruction Screen](documents/instruction.png)
+    ![Instruction Screen](documents/instructionscreen.png)
 
 ---
 

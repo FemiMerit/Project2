@@ -66,7 +66,27 @@ You can try the game here: [Play Duck Hunt](https://femimerit.github.io/Project2
 
         * Displays a colourful page with a dog walking across it
 
-    ![Title Screen](documentation/)
+    ![Title Screen](documents/titlescreen.gif)
+
+---
+
++ ### Intrusction Screen
+
+    - Represent: 
+
+        * Displays the instruction
+
+    ![Title Screen](documents/instruction.png)
+
+---
+
++ ### Gameplay Screen
+
+    - Represent: 
+
+        * Displays the gameplay
+
+    ![Title Screen](documents/gameplay.gif)
 
 ---
 

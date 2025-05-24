@@ -2,8 +2,6 @@
   Styles and animations for the dog element.
 */
 #dog {
-  display: flex;
-  flex-direction:column;
   /* Sprite sheet for walking animation */ 
   background: url('../images/dogwalk.png'); 
   /* Position the dog near the bottom of the screen */
